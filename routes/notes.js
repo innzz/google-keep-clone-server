@@ -19,14 +19,14 @@ const addNotehandler = async (req,res)=>{
 
 const getNoteshandler = async (req,res)=>{
     // console.log(req.body);
-    // if (req.method == 'GET') {
-    //     let notes = await Note.find({});
+    if (req.method == 'GET') {
+        let notes = await Note.find({});
         // console.log(notes)
-        res.status(200).json("notes");
-    // }
-    // else{
-    //     res.status(400).json({error: "error"})
-    // }
+        res.status(200).json({notes: notes});
+    }
+    else{
+        res.status(400).json({error: "error"})
+    }
 }
 
 const getTrashNoteshandler = async (req,res)=>{
