@@ -19,6 +19,10 @@ app.use(bodyParser.json())
 
 app.use('/api',require(path.join(__dirname,'routes/notes.js')));
 
+app.get('/',(req,res)=>{
+    res.status(200).send("success")
+})
+
 // app.post('/api/addNote',(req,res)=>{
 //     console.log(req.body);
 //     // console.log(req.body);
