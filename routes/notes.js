@@ -112,7 +112,7 @@ router.post('/updateNotesStatus',connectDb(updateNotesStatushandler));
 router.post('/updateNotes',connectDb(updateNoteshandler));
 router.post('/restoreNotes',connectDb(restoreNoteshandler));
 router.get('/',(req,res)=>{
-    res.status(200).send("success")
+    res.status(200).send("api")
 });
 
 
