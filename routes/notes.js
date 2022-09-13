@@ -111,6 +111,9 @@ router.delete('/deletePermanentNotes',connectDb(deletePermanentNoteshandler));
 router.post('/updateNotesStatus',connectDb(updateNotesStatushandler));
 router.post('/updateNotes',connectDb(updateNoteshandler));
 router.post('/restoreNotes',connectDb(restoreNoteshandler));
+router.get('/',(req,res)=>{
+    res.status(200).send("success")
+});
 
 
 module.exports = router;
